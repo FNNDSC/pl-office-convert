@@ -33,7 +33,7 @@ jobs:
             -v $GITHUB_WORKSPACE/examples/incoming:/incoming:ro \
             -v $test_output:/outgoing:rw \
             pl-office-convert office_convert /incoming /outgoing
-          echo "::set-output name=output_dir::test_output"
+          echo "::set-output name=output_dir::$test_output"
       - name: Assert outputs
         run: diff -rq '${{ github.workspace }}/examples/incoming' '${{ steps.run_example.outputs.output_dir }}'
 
