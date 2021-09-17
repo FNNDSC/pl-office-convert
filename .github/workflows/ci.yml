@@ -35,7 +35,7 @@ jobs:
             pl-office-convert office_convert /incoming /outgoing
           echo "::set-output name=output_dir::$test_output"
       - name: Assert outputs
-        run: diff -rq '${{ github.workspace }}/examples/incoming' '${{ steps.run_example.outputs.output_dir }}'
+        run: diff -rq '${{ github.workspace }}/examples/outgoing' '${{ steps.run_example.outputs.output_dir }}'
 
   publish:
     if: github.event_name == 'push' || github.event_name == 'release'
