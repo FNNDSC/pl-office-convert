@@ -6,7 +6,7 @@ with open(path.join(path.dirname(path.abspath(__file__)), 'README.md')) as f:
 
 setup(
     name             = 'office_convert',
-    version          = '0.0.1',
+    version          = '0.0.2',
     description      = 'Excel and ODS Spreadsheet to CSV Converter',
     long_description = readme,
     author           = 'FNNDSC',
